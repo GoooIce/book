@@ -24,13 +24,24 @@ plt.show()
 以上代码中，我们方法说明:
 
 - plt.title() 设置图表的名称
+
 - plt.xlabel() 设置x轴名称
+
 - plt.ylabel() 设置y轴名称
+
 - plt.xticks(x,ticks,rotation) 设置x轴的刻度,rotation旋转角度
+
 - plt.yticks() 设置y轴的刻度
+
 - plt.plot()  绘制线性图表
+
 - plt.show() 显示图表
+
 - plt.legend() 显示图例
+
+- plt.text(x,y,text) 显示每条数据的值  x,y值的位置
+
+  
 
 ### 图表中文显示
 
@@ -134,7 +145,9 @@ plt.rcParams['font.family']=['SimHei']
 
 特点：绘制连**离散**的数据，能够一眼看出各个数据的大小，可以快速**统计**数据之间的差别
 
- bar(x,y,color) 函数来生成条形图
+ bar(x,y,color,width) 函数来生成纵向条形图
+
+ barh(x,y,color,height) 函数来生成条形图
 
 - x 条装显示位置
 - y 显示的值
@@ -162,9 +175,32 @@ plt.show()
 
 特点：绘制连续性的数据，展示一组或多组数据的分布状况并**统计**
 
+注意：拿到数据来统计，而不是直接拿统计好的数据
+
+概念：
+
+​	组距：每组数据的分割区域，例如1-5一组5-10一组。我们可以称数据的组距为5
+
+​	组数：(最大数据-最小数据)/组距 一般会100条数据可分5-12组
+
+hist(data,bins,normed)
+
+- data 所有的数据
+- bins 分几组
+- normed y轴是否显示成百分比
+
+```python
+plt.hist(data,bins)
+```
+
 ### 绘画散点图
 
 用两组数据构成多个坐标点，考察坐标点的分布，判断两变量之间是否存在某种关联或总结坐标点的分布模式
+
+```python
+plt.scatter(x,info)
+plt.plot(x,a,'o')
+```
 
 特点：判断变量之间是否存在在数量关联走势，展示离群点**分布规律**
 
