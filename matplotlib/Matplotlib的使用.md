@@ -41,7 +41,6 @@ plt.show()
 
 - plt.text(x,y,text) 显示每条数据的值  x,y值的位置
 
-  
 
 ### 图表中文显示
 
@@ -222,4 +221,13 @@ axs[0, 1].plot(data[0], data[1])
 axs[1, 1].hist2d(data[0], data[1])
 
 plt.show()
+
+# 第2种
+fig = plt.figure() 定义绘图区域
+figsize 可选参数 设置 画图区域的大小(w,h)
+ax1= fig.add_subplot(2,2,1)
+ax2= fig.add_subplot(2,2,2)
+ax3 =fig.add_subplot(2,2,4)
+三个数字创建几行，几列个图，位置在哪
 ```
+
